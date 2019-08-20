@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
-const connection = mongoose.connect('mongodb+srv://AnuradhaDS:anuradha@cluster0-uwxul.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
-connection .then((db) => { console.log("Connected correctly to server"); }) .catch((err) => { console.log(err) });
+//const mongoose = require('mongoose');
+//const connection = mongoose.connect('mongodb+srv://AnuradhaDS:anuradha@cluster0-uwxul.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true});
+//connection .then((db) => { console.log("Connected correctly to server"); }) .catch((err) => { console.log(err) });
 
 
 
 
-
+const usersRouter = require('./routes/users');
+//app.use('/users', usersRouter);
 
 var createError = require('http-errors');
 var express = require('express');
@@ -14,7 +15,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//var usersRouter = require('./routes/users');
 
 var app = express();
 
